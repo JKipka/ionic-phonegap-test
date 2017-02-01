@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Aufgenommenes Bild</ion-title>
+    <ion-buttons right>
+    <button ion-button (click)="dismiss()">Fertig</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+   <img [src]="stringSrc" *ngIf="stringSrc" />
+   <button ion-button outline round (click)="presentActionSheet()" *ngIf="stringSrc">Teilen</button>
+   <button ion-button outline round (click)="retake()">Wiederholen</button>
+</ion-content>

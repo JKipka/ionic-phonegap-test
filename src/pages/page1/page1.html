@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Page One</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!--<img src="{{base64Image}}"/>-->
+  <h3>Telefonstatus</h3>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="battery-full" item-left></ion-icon>
+      <ion-label stacked>Akku-Status:</ion-label>
+      <ion-label>{{batterystatus}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="refresh-circle" item-left></ion-icon>
+      <ion-label stacked>Window-Modus:</ion-label>
+      <ion-label>{{orientation}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="wifi" item-left></ion-icon>
+      <ion-label stacked>Netzwerk-Status:</ion-label>
+      <ion-label>{{networkStatus}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="barcode" item-left></ion-icon>
+      <ion-label stacked>Netzwerk-Typ:</ion-label>
+      <ion-label>{{networkType}}</ion-label>
+    </ion-item>
+  </ion-list><br>
+  <button ion-button (click)="whatsAppShare()" round outline>Teilen über WhatsApp</button>
+  <h3>Funktionen</h3>
+  <button ion-button block (click)="takePicture()" round outline>Foto aufnehmen</button>
+
+</ion-content>
